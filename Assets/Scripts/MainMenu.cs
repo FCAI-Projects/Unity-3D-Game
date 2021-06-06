@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
 
     public void playGame()
     {
+        Global.Player1 = false;
+        Global.Player2 = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

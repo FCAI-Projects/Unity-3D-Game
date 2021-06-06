@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class WinBox : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        Global.IfWin = 1;
-        GameObject.Find("Vehicles_PizzaCar").SendMessage("Finnish");
+        Debug.Log(other.name);
+        if (other.name == "Vehicles_PizzaCar1")
+        {
+            GameObject.Find("Vehicles_PizzaCar1").SendMessage("Finnish");
+        } else if(other.name == "Vehicles_PizzaCar")
+        {
+            GameObject.Find("Vehicles_PizzaCar").SendMessage("Finnish");
+        }
     }
 }

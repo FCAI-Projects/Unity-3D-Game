@@ -24,12 +24,19 @@ public class Timer : MonoBehaviour
         if (finnished)
             return;
 
-        t = Time.time - startTime;
+        if (!Global.Player1)
+        {
+            t = Time.time - startTime;
 
-        Global.min = ((int)t / 60);
-        Global.sec = (t % 60);
+            Global.min = ((int)t / 60);
+            Global.sec = (t % 60);
 
-        timerText.text = Global.min.ToString("00") + " : " + Global.sec.ToString("00");
+            timerText.text = Global.min.ToString("00") + " : " + Global.sec.ToString("00");
+
+        } else
+        {
+            timerText.color = Color.red;
+        }
 
 
     }
@@ -38,6 +45,7 @@ public class Timer : MonoBehaviour
     {
         finnished = true;
         timerText.color = Color.green;
+        Global.IfWin = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 

@@ -29,6 +29,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private Transform rearRightWheelTransform;
 
     [SerializeField] private GameObject car;
+    public Rigidbody rb;
 
     private void FixedUpdate()
     {
@@ -46,7 +47,12 @@ public class Movement : MonoBehaviour
             car.transform.localPosition.y <= -10)
         {
             Global.IfDead = 1;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            Global.Player1 = true;
+            rb.velocity = new Vector3(0, 0, 0);
+            if (Global.Player1)
+            {
+                Global.End();
+            }
         }
     }
 
