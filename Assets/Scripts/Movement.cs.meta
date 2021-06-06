@@ -3,7 +3,16 @@ guid: 44ca478862a5e2349a2eea335097c513
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - frontLeftWheelCollider: {instanceID: 0}
+  - frontRightWheelCollider: {instanceID: 0}
+  - rearLeftWheelCollider: {instanceID: 0}
+  - rearRightWheelCollider: {instanceID: 0}
+  - frontLeftWheelTransform: {instanceID: 0}
+  - frontRightWheeTransform: {instanceID: 0}
+  - rearLeftWheelTransform: {instanceID: 0}
+  - rearRightWheelTransform: {instanceID: 0}
+  - car: {fileID: 100008, guid: 1989787f5d4f08647a723f7cb7df5f05, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

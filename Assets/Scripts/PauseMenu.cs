@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused ;
 
     public GameObject PauseMenuUI;
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
 
     void Update()
     {

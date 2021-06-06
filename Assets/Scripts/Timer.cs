@@ -10,6 +10,9 @@ public class Timer : MonoBehaviour
     public Text timerText;
     private float startTime;
     private bool finnished = false;
+    public float t;
+    public string min;
+    public string sec ;
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +26,10 @@ public class Timer : MonoBehaviour
         if (finnished)
             return;
 
-        float t = Time.time - startTime;
+        t = Time.time - startTime;
 
-        string min = ((int)t / 60).ToString("00");
-        string sec = (t % 60).ToString("00");
+        min = ((int)t / 60).ToString("00");
+        sec = (t % 60).ToString("00");
 
         timerText.text = min + " : " + sec;
     }
