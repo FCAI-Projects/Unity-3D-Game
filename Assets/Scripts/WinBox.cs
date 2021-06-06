@@ -18,6 +18,7 @@ public class WinBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Global.IfWin = 1;
         GameObject.Find("Vehicles_PizzaCar").SendMessage("Finnish");
     }
 }

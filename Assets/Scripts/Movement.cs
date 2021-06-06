@@ -41,10 +41,11 @@ public class Movement : MonoBehaviour
 
     private void HandleEulerAngles()
     {
-        if (car.transform.localRotation.eulerAngles.z == 270 ||
-            car.transform.localRotation.eulerAngles.z == 90 ||
+        if ((car.transform.localRotation.eulerAngles.z >= 260 && car.transform.localRotation.eulerAngles.z <= 280) ||
+            (car.transform.localRotation.eulerAngles.z >= 80 && car.transform.localRotation.eulerAngles.z <= 100) ||
             car.transform.localPosition.y <= -10)
         {
+            Global.IfDead = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
     }

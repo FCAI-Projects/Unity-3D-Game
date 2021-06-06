@@ -6,13 +6,11 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-
     public Text timerText;
     private float startTime;
     private bool finnished = false;
     public float t;
-    public string min;
-    public string sec ;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +26,12 @@ public class Timer : MonoBehaviour
 
         t = Time.time - startTime;
 
-        min = ((int)t / 60).ToString("00");
-        sec = (t % 60).ToString("00");
+        Global.min = ((int)t / 60);
+        Global.sec = (t % 60);
 
-        timerText.text = min + " : " + sec;
+        timerText.text = Global.min.ToString("00") + " : " + Global.sec.ToString("00");
+
+
     }
 
     public void Finnish()
@@ -40,4 +40,5 @@ public class Timer : MonoBehaviour
         timerText.color = Color.green;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
 }

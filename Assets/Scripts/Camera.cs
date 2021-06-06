@@ -12,13 +12,13 @@ public class Camera : MonoBehaviour
     {
         HandleTranslate();
         HandleRotation();
+        
     }
 
     private void HandleTranslate()
     {
         var targetPos = target.TransformPoint(offest);
         transform.position = Vector3.Lerp(transform.position, targetPos, translateSpeed * Time.deltaTime);
-
     }
 
     private void HandleRotation()

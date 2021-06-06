@@ -53222,8 +53222,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 2022717947}
   t: 0
-  min: 
-  sec: 
 --- !u!54 &1997985959
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53266,7 +53264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motorForce: 500
-  breakForce: 1000
+  breakForce: 5000
   maxSteerAngle: 20
   frontLeftWheelCollider: {fileID: 2037335297}
   frontRightWheelCollider: {fileID: 1641747902}
@@ -53277,6 +53275,18 @@ MonoBehaviour:
   rearLeftWheelTransform: {fileID: 867827386}
   rearRightWheelTransform: {fileID: 1864758334}
   car: {fileID: 1997985956}
+--- !u!114 &1997985963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997985956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2ea5a3f02fd16458c6c31819bd007d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1998471995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54164,7 +54174,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &2022717948
 CanvasRenderer:
   m_ObjectHideFlags: 0
