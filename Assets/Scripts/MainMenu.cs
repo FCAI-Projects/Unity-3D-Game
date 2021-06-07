@@ -10,7 +10,11 @@ public class MainMenu : MonoBehaviour
     {
         Global.Player1 = false;
         Global.Player2 = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Global.IfDead = 0;
+        Global.IfWin = 0;
+        Global.IfDead2 = 0;
+        Global.IfWin2 = 0;
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void quitGame()

@@ -59,7 +59,7 @@ public class Movement2 : MonoBehaviour
     {
         horizontalInput = Input.GetAxis(HORIZONTAL);
         verticalInput = -1 * Input.GetAxis(VERTICAL);
-        isBreaking = Input.GetKey(KeyCode.RightShift);
+        isBreaking = Input.GetKey(KeyCode.Space);
     }
 
     private void HandleMotor()
